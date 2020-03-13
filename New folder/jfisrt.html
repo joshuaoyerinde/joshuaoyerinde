@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>MY walk</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="externals/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="externals/W3CSS.css">
+	    <script src="externals/jquery 3.3.1.js"></script>
+        <script src="external/bootstrap/dist/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="w3-sidebar w3-bar-block  w3-light-grey w3-card w3-animate-left" id="mySidebar">
+                <button class="w3-bar-item w3-button w3-large w3-green" id="btn1">Close &nbsp; &times;</button>
+                <a href="#" class="w3-bar-item w3-button">Link 1</a>
+                <a href="#" class="w3-bar-item w3-button">Link 2</a>
+                <a href="#" class="w3-bar-item w3-button">Link 3</a>
+        </div>
+        <div id="main">
+            <div class="w3-teal">
+                    <button id="openNav" class="w3-button w3-teal w3-xlarge">&#9776;</button>
+                    <div class="w3-container">
+                            <h1>My Page</h1>
+                    </div>
+            </div>
+            <div class="container">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia explicabo aut dicta distinctio ipsa minus adipisci similique, eum enim illum eius error? Cum vel eaque totam, facilis ex veniam dolor!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptatum consectetur, reprehenderit incidunt adipisci id voluptates quae fugiat numquam facere totam quam, sed dolore voluptas libero sunt beatae quisquam perspiciatis.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores voluptas rerum sed quae possimus qui minima iste, laborum nostrum in molestiae illum quas neque perferendis? Quidem dolores ipsam voluptates perferendis!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam aliquam pariatur vel! Aut, minima dolorum architecto, suscipit commodi ipsa soluta ut, quos facilis nihil nesciunt non voluptate pariatur rem harum!
+            </div>
+        </div>
+        <input type="text" value="0" id="countNum">
+    <button type="button" onclick="count()"> count</button>
+
+        <script>
+            $(document).ready(function(){
+             $("#mySidebar").hide();
+                $("#openNav").click(function(){
+                    $("#mySidebar").show();
+                    $('#main').css({marginLeft:"25%"});
+                    $("#mySidebar").css({width:"25%",height:"45vh"}); 
+                    $("#openNav").hide();  
+                });
+                $("#btn1").click(function(){
+                    $("#mySidebar").hide(2000);
+                    $('#main').css({marginLeft:""});
+                    $("#openNav").show("slow"); 
+                });
+            });
+            count= ()=>{
+                countNum.value++;
+            }
+        </script>
+    </body>
+</html>
